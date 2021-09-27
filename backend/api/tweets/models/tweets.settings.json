@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tweets",
+  "info": {
+    "name": "tweets"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "date": {
+      "type": "string"
+    },
+    "time": {
+      "type": "string"
+    },
+    "tweet": {
+      "type": "text"
+    },
+    "replies": {
+      "type": "integer"
+    },
+    "retweets": {
+      "type": "integer"
+    },
+    "likes": {
+      "type": "integer"
+    }
+  }
+}
