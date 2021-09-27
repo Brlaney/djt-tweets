@@ -1,13 +1,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
 
-$c-primary: '#246EB9';
-$c-secondary: '#16ff4c';
-$c-error: '#F06543';
-$c-warning: '#F5EE9E';
-$c-info: '#16c9ff';
+$primary: '#1d2031';
+$primary-rgb: 'RGB(29, 32, 49)';
+$secondary: '#dc0250';
+$secondary-rgb: 'RGB(220, 2, 80)';
+$error: '#6E353A';
+$warning: '#F5EE9E';
+$info: '#568BFF';
+$success: '#00B389';
+
+$c-border: '#e5e5e5';
 $c-bg: '#FDFFFC';
 $white: #fff;
 $black: #000000;
+
+// Generic gradient
+$c5: '#1D2031';
+$c6: '#573B5A';
+$c7: '#A0556F';
+$c8: '#DE7B6D';
+$c9: '#FFB462';
+$c10: '#F9F871';
+
+// Palette 1
+$c11: '#1D2031';
+$c12: '#A8AABC';
+$c13: '#747687';
+$c14: '#614647';
+
+// Palette 2
+$c15: '#1D2031';
+$c16: '#568BFF';
+$c17: '#F1F1E6';
+$c18: '#FFF7D6';
+
+// Palette 3
+$c19: '#1D2031';
+$c20: '#523D67';
+$c21: '#6E353A';
+
+// Palette 4
+$c22: '#1d2031';
+$c23: '#568BFF';
+$c24: '#F1F1E6';
+$c25: '#F0C139';
 
 $primary-font: 'Rubik',
 -apple-system,

@@ -19,8 +19,18 @@ export default function MyApp(props: MyAppProps) {
   return (
     <CacheProvider value={emotionCache}>
       <Head>
-        <title>Djt-Tweets</title>
-        <meta name="viewport" content="initial-scale=1, width=device-width" />
+        <meta charSet='utf-8' />
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <meta
+          name='keywords'
+          content='Twitter, Donald Trump, Tweets, President Trump, API, Strapi, Endpoints, React, Next.js'
+        />
+        <meta
+          name='description'
+          content='Next.js frontend web app that fetches Donald Trumps most popular tweets'
+        />
+        <link rel='icon' type='image/png' href='/favicon.png' />
+        <title>DJT Tweets</title>
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
