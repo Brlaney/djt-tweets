@@ -86,7 +86,7 @@ npm run dev
 ```
 MIT License
 
-Copyright (c) 2021 Brendan Laney - Django-Next author.
+Copyright (c) 2021 strapi-next-fullstack author.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
