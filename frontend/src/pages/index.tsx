@@ -1,4 +1,5 @@
 import * as React from 'react';
+import CssBaseline from '@mui/material/CssBaseline';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
@@ -12,44 +13,39 @@ const Index = ({ count }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const [tweetCount] = React.useState(count);
 
   return (
-    <Container className={styles.container}>
-      <Box className={styles.box}>
+    <>
+      <CssBaseline />
+      <Container className={styles.container}>
+        <Box className={styles.box}>
 
-        {/* Header */}
-        <Paper className={styles.header} elevation={0}>
-          <Typography
-            className={styles.title}
-            variant='h1'
-            component='h1'
-            gutterBottom
-          >
-            Welcome, to Donald's Tweets
-          </Typography>
-          <Typography
-            className={styles.subtitle}
-            variant='h5' color='text.secondary'
-            component='h2'
-            gutterBottom
-          >
-            An app that explores the Donald J. Trump's most influential tweets
-          </Typography>
-        </Paper>
+          {/* Header */}
+          <Paper className={styles.header} elevation={0}>
+            <Typography
+              className={styles.title}
+              variant='h1'
+              component='h1'
+              gutterBottom
+            >
+              Welcome, to this website
+            </Typography>
+          </Paper>
 
-        {/* Main content */}
-        <Paper elevation={0} className={styles.homecontent}>
-          <Typography
-            color='inherit'
-            className={styles.count}
-            variant='body1'
-            component='h3'
-          >
-            The total number of influential tweets contained in the database:
-            <span color='secondary' className={styles.span}> {tweetCount}</span>
-          </Typography>
-        </Paper>
+          {/* Main content */}
+          <Paper elevation={0} className={styles.homecontent}>
+            <Typography
+              color='inherit'
+              className={styles.count}
+              variant='body1'
+              component='h3'
+            >
+              The total number of influential tweets contained in the database:
+              <span color='secondary' className={styles.span}> {tweetCount}</span>
+            </Typography>
+          </Paper>
 
-      </Box>
-    </Container>
+        </Box>
+      </Container>
+    </>
   );
 }
 

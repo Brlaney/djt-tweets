@@ -1,7 +1,6 @@
 import * as React from 'react';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import createEmotionServer from '@emotion/server/create-instance';
-import theme from '@/lib/config/themes/theme';
 import createEmotionCache from '@/lib/config/cache/createEmotionCache';
 import Navbar from '@/components/Navbar';
 
@@ -9,9 +8,7 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html lang='en'>
-        <Head>
-          <meta name='theme-color' content={theme.palette.primary.main} />
-        </Head>
+        <Head />
         <body>
           <Navbar />
           <Main />

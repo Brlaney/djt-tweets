@@ -5,9 +5,9 @@
     </a>
     <a href="#status"><img src="https://img.shields.io/badge/Maintained-yes-green.svg?style=flat-square"></a>
   </p>
-  <h1>Djt-Tweets</h1>
+  <h1>App</h1>
   <h5>Strapi backend + Next.js frontend</h5>
-  <p><b>Djt-Tweets</b> contains a backend <b>Strapi</b> API containing Donald Trump's most influential tweets. </br> The frontend uses<b>Next.js</b> which fetches and renders the API's contents.</p>
+  <p><b>App</b> contains a backend <b>Strapi</b> API containing  </br> The frontend uses<b>Next.js</b> which fetches and renders the API's contents.</p>
 </div>
 
 # Table Of Contents
