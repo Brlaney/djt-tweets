@@ -38,8 +38,8 @@ const Index = ({ count }: InferGetStaticPropsType<typeof getStaticProps>) => {
               variant='body1'
               component='h3'
             >
-              The total number of influential tweets contained in the database:
-              <span color='secondary' className={styles.span}> {tweetCount}</span>
+              {/* The total number of influential tweets contained in the database: */}
+              {/* <span color='secondary' className={styles.span}> {tweetCount}</span> */}
             </Typography>
           </Paper>
 

@@ -23,7 +23,7 @@ const Navbar = () => {
               href='#'
               sx={{ my: 1, mx: 1.5 }}
             >
-              Features
+              Shop
             </Link>
             <Link
               variant='button'
@@ -31,7 +31,7 @@ const Navbar = () => {
               href='#'
               sx={{ my: 1, mx: 1.5 }}
             >
-              Enterprise
+              Contact
             </Link>
             <Link
               variant='button'

@@ -30,7 +30,7 @@ export default function MyApp(props: MyAppProps) {
           content='Next.js frontend web app that fetches Donald Trumps most popular tweets'
         />
         <link rel='icon' type='image/png' href='/favicon.png' />
-        <title>DJT Tweets</title>
+        <title>Strapi | Next</title>
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
