@@ -1,0 +1,19 @@
+@import './themes/theme';
+@import './mixins/width.scss';
+
+.navbar {
+  .toolbar {
+    // .brand {
+    //   flex-grow: 1;
+    // }
+    .nav {
+      .link {
+        margin: 0.8rem 1rem;
+      }
+    }
+    .login {
+      background-color: $secondary;
+      margin: 0.8rem 1rem;
+    }
+  }
+}

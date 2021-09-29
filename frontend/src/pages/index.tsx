@@ -1,5 +1,4 @@
 import * as React from 'react';
-import CssBaseline from '@mui/material/CssBaseline';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
@@ -9,12 +8,12 @@ import { server } from '@/lib/config/endpoints';
 import { ICount } from '@/lib/types';
 import styles from '@/styles/Home.module.scss';
 
-const Index = ({ count }: InferGetStaticPropsType<typeof getStaticProps>) => {
+const Index = ({ count }:
+  InferGetStaticPropsType<typeof getStaticProps>) => {
   const [tweetCount] = React.useState(count);
 
   return (
     <>
-      <CssBaseline />
       <Container className={styles.container}>
         <Box className={styles.box}>
 
@@ -38,8 +37,8 @@ const Index = ({ count }: InferGetStaticPropsType<typeof getStaticProps>) => {
               variant='body1'
               component='h3'
             >
-              {/* The total number of influential tweets contained in the database: */}
-              {/* <span color='secondary' className={styles.span}> {tweetCount}</span> */}
+              The total number of influential tweets contained in the database:
+              <span color='secondary' className={styles.span}> {tweetCount}</span>
             </Typography>
           </Paper>
 

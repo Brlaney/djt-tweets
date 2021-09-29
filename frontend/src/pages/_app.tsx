@@ -15,7 +15,11 @@ interface MyAppProps extends AppProps {
 }
 
 export default function MyApp(props: MyAppProps) {
-  const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
+  const {
+    Component,
+    emotionCache = clientSideEmotionCache, pageProps
+  } = props;
+
   return (
     <CacheProvider value={emotionCache}>
       <Head>
@@ -34,7 +38,7 @@ export default function MyApp(props: MyAppProps) {
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Component {...pageProps} />
+        <Component {...pageProps} theme={theme} />
       </ThemeProvider>
     </CacheProvider>
   );

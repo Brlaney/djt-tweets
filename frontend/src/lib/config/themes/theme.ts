@@ -30,9 +30,15 @@ let theme = createTheme({
     subtitle2: { fontSize: 19 },
     body1: { fontSize: 19 },
     body2: { fontSize: 16 }
+  },
+  components: {
+    MuiTypography: {
+      defaultProps: {
+        fontFamily: font,
+      }
+    }
   }
 });
 
 theme = responsiveFontSizes(theme);
-
 export default theme;

@@ -1,0 +1,42 @@
+@import './themes/theme';
+@import './mixins/width.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  .box {
+    margin: 7rem 0 0 0;
+    width: 100%;
+    // .avatar {
+
+    // }
+    // .title {
+
+    // }
+    .form {
+      width: 80%;
+      // .inputEmail {
+
+      // }
+      // .inputPassword {
+
+      // }
+      // .formControl {
+
+      // }
+      // .login {
+
+      // }
+      // .grid {
+      //   .gridItem {
+      //     .gridLink {
+
+      //     }
+      //   }
+      // }
+    }
+  }
+}
