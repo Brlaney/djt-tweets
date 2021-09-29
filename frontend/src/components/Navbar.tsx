@@ -18,7 +18,10 @@ const Navbar = () => {
             `1px solid ${theme.palette.divider}`
         }}
       >
-        <Toolbar className={styles.toolbar} sx={{ flexWrap: 'wrap' }}>
+        <Toolbar
+          className={styles.toolbar}
+          sx={{ flexWrap: 'wrap' }}
+        >
           <Typography
             className={styles.brand}
             variant='h6'
@@ -60,10 +63,20 @@ const Navbar = () => {
           <Button
             className={styles.login}
             href='/auth/login'
-            variant='contained'
-            sx={{ my: 1, mx: 1.5 }}
+            color='primary'
+            variant='outlined'
+            sx={{ my: 1, mx: 0.4 }}
           >
             Login
+          </Button>
+          <Button
+            className={styles.register}
+            href='/auth/register'
+            color='secondary'
+            variant='outlined'
+            sx={{ my: 1, mx: 0.4 }}
+          >
+            Register
           </Button>
         </Toolbar>
       </AppBar>

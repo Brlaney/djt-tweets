@@ -4,7 +4,6 @@
 .navbar {
   .toolbar {
     // .brand {
-    //   flex-grow: 1;
     // }
     .nav {
       .link {
@@ -13,7 +12,11 @@
     }
     .login {
       background-color: $secondary;
-      margin: 0.8rem 1rem;
+      // margin: 0.8rem 0.3rem;
+    }
+    .register {
+      background-color: $success;
+      // margin: 0.8rem 0.3rem;
     }
   }
 }

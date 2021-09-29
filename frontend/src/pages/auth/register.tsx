@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useRouter } from 'next/router';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
@@ -14,14 +15,27 @@ import { server } from '@/lib/config/endpoints';
 import styles from '@/styles/Auth.module.scss';
 
 const Register = () => {
-  const [email, setEmail] = React.useState('');
-  const [password, setPassword] = React.useState('');
+  const router = useRouter();
+  const [data, setData] = React.useState({
+    email: '',
+    password: '',
+  });
 
-  async function handleRegister() {
-    const registerData = {
-      email: email,
-      password: password
-    };
+  const handleChange = (event) => {
+    const { value, name } = event.target;
+    setData({
+      ...data,
+      [name]: value,
+    });
+  };
+
+  async function handleRegister(event) {
+    event.preventDefault();
+    const { email, password } = event.target;
+    setData({
+      email: email.value,
+      password: password.value
+    });
 
     const register = await fetch(`${server}/auth/local`, {
       method: 'POST',
@@ -29,12 +43,13 @@ const Register = () => {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(registerData)
+      body: JSON.stringify(data)
     });
 
     const registerResponse = await register.json();
 
     console.log(registerResponse);
+    router.push('/');
   };
 
   return (
@@ -73,7 +88,6 @@ const Register = () => {
             component='form'
             noValidate
             onSubmit={handleRegister}
-            sx={{ mt: 3 }}
           >
             <Grid className={styles.grid} container spacing={2}>
               <Grid className={styles.gridItem} item xs={12}>
@@ -85,6 +99,8 @@ const Register = () => {
                   label='Email Address'
                   name='email'
                   autoComplete='email'
+                  value={data.email}
+                  onChange={(e) => handleChange(e)}
                 />
               </Grid>
               <Grid className={styles.gridItem} item xs={12}>
@@ -96,6 +112,8 @@ const Register = () => {
                   type='password'
                   id='password'
                   autoComplete='password'
+                  value={data.password}
+                  onChange={(e) => handleChange(e)}
                 />
               </Grid>
               <Grid className={styles.gridItem} item xs={12}>

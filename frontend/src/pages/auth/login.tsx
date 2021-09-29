@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useRouter } from 'next/router';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
@@ -11,12 +12,13 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { server } from '@/lib/config/endpoints';
-import nookies from 'nookies'
+import nookies, { setCookie } from 'nookies'
 import styles from '@/styles/Auth.module.scss';
 
 const Login = () => {
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
+  const router = useRouter();
 
   async function handleLogin() {
     const loginData = {
@@ -35,7 +37,14 @@ const Login = () => {
 
     const loginResponse = await login.json();
 
+    setCookie(null, 'jwt', loginResponse.jwt, {
+      maxAge: 30 * 24 * 60 * 60,
+      path: '/'
+    });
+
     console.log(loginResponse);
+
+    router.push('/');
   };
 
   return (
