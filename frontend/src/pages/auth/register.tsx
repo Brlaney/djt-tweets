@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { useRouter } from 'next/router';
+import axios from 'axios';
+import { useFormik } from 'formik';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
@@ -15,42 +16,23 @@ import { server } from '@/lib/config/endpoints';
 import styles from '@/styles/Auth.module.scss';
 
 const Register = () => {
-  const router = useRouter();
-  const [data, setData] = React.useState({
-    email: '',
-    password: '',
+  const formik = useFormik({
+    initialValues: {
+      username: 'brlaney',
+      identifier: 'testing2@gmail.com',
+      password: 'Abc37920!',
+    },
+    onSubmit: values => {
+      // Testing response:
+      // alert(JSON.stringify(values, null, 2));
+
+      axios.post(`${server}/auth/local`, {
+        username: values.username,
+        identifier: values.identifier,
+        password: values.password,
+      })
+    }
   });
-
-  const handleChange = (event) => {
-    const { value, name } = event.target;
-    setData({
-      ...data,
-      [name]: value,
-    });
-  };
-
-  async function handleRegister(event) {
-    event.preventDefault();
-    const { email, password } = event.target;
-    setData({
-      email: email.value,
-      password: password.value
-    });
-
-    const register = await fetch(`${server}/auth/local`, {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
-    });
-
-    const registerResponse = await register.json();
-
-    console.log(registerResponse);
-    router.push('/');
-  };
 
   return (
     <>
@@ -85,22 +67,35 @@ const Register = () => {
           </Typography>
           <Box
             className={styles.form}
+            onSubmit={formik.handleSubmit}
             component='form'
             noValidate
-            onSubmit={handleRegister}
           >
             <Grid className={styles.grid} container spacing={2}>
               <Grid className={styles.gridItem} item xs={12}>
                 <TextField
-                  className={styles.inputEmail}
-                  required
+                  id='username'
+                  name='username'
+                  label='Username'
+                  className={styles.inputUsername}
+                  autoComplete='Username'
+                  margin='normal'
+                  onChange={formik.handleChange}
+                  value={formik.values.username}
+                  autoFocus
                   fullWidth
+                />
+                <TextField
                   id='email'
-                  label='Email Address'
                   name='email'
+                  label='Email Address'
+                  className={styles.inputEmail}
                   autoComplete='email'
-                  value={data.email}
-                  onChange={(e) => handleChange(e)}
+                  type='email'
+                  onChange={formik.handleChange}
+                  value={formik.values.identifier}
+                  fullWidth
+                  required
                 />
               </Grid>
               <Grid className={styles.gridItem} item xs={12}>
@@ -112,8 +107,8 @@ const Register = () => {
                   type='password'
                   id='password'
                   autoComplete='password'
-                  value={data.password}
-                  onChange={(e) => handleChange(e)}
+                  onChange={formik.handleChange}
+                  value={formik.values.password}
                 />
               </Grid>
               <Grid className={styles.gridItem} item xs={12}>

@@ -1,5 +1,6 @@
-import * as React from 'react';
-import { useRouter } from 'next/router';
+import React from 'react';
+import axios from 'axios';
+import { useFormik } from 'formik';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
@@ -16,36 +17,46 @@ import nookies, { setCookie } from 'nookies'
 import styles from '@/styles/Auth.module.scss';
 
 const Login = () => {
-  const [email, setEmail] = React.useState('');
-  const [password, setPassword] = React.useState('');
-  const router = useRouter();
+  const formik = useFormik({
+    initialValues: {
+      // username: 'brlaney',
+      identifier: 'testing123@gmail.com',
+      password: 'Abc37920!',
+    },
+    onSubmit: values => {
+      // Testing response:
+      // alert(JSON.stringify(values, null, 2));
 
-  async function handleLogin() {
-    const loginData = {
-      identifier: email,
-      password: password
-    };
+      axios.post(`${server}/auth/local`, {
+        identifier: values.identifier,
+        password: values.password,
+      })
+    }
+  });
 
-    const login = await fetch(`${server}/auth/local`, {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(loginData)
-    });
+  //   const loginData = {
+  //     identifier: email,
+  //     password: password
+  //   };
 
-    const loginResponse = await login.json();
+  //   const login = await fetch(`${server}/auth/local`, {
+  //     identifier: 'testing123@gmail.com',
+  //     password: 'Abc37920!',
+  //     method: 'POST',
+  //     headers: {
+  //       'Accept': 'application/json',
+  //       'Content-Type': 'application/json'
+  //     },
+  //     body: JSON.stringify(loginData)
+  //   });
 
-    setCookie(null, 'jwt', loginResponse.jwt, {
-      maxAge: 30 * 24 * 60 * 60,
-      path: '/'
-    });
+  //   const loginResponse = await login.json();
 
-    console.log(loginResponse);
-
-    router.push('/');
-  };
+  //   setCookie(null, 'jwt', loginResponse.jwt, {
+  //     maxAge: 30 * 24 * 60 * 60,
+  //     path: '/'
+  //   });
+  // },
 
   return (
     <>
@@ -82,31 +93,46 @@ const Login = () => {
           <Box
             className={styles.form}
             component='form'
-            onSubmit={handleLogin}
+            onSubmit={formik.handleSubmit}
             noValidate
             sx={{ mt: 1 }}
           >
-            <TextField
+            {/* <TextField
+              id='username'
+              name='username'
               className={styles.inputEmail}
               margin='normal'
-              required
               fullWidth
-              id='email'
-              label='Email Address'
-              name='email'
-              autoComplete='email'
+              label='Username'
+              autoComplete='Username'
               autoFocus
+            /> */}
+            <TextField
+              id='email'
+              name='identifier'
+              className={styles.inputEmail}
+              margin='normal'
+              label='Email Address'
+              autoComplete='email'
+              type='email'
+              onChange={formik.handleChange}
+              value={formik.values.identifier}
+              autoFocus
+              fullWidth
+              required
             />
             <TextField
+              id='password'
+              name='password'
               className={styles.inputPassword}
               margin='normal'
-              required
-              fullWidth
-              name='password'
               label='Password'
               type='password'
-              id='password'
               autoComplete='current-password'
+              onChange={formik.handleChange}
+              value={formik.values.password}
+              fullWidth
+              required
             />
             <FormControlLabel
               className={styles.formControl}
