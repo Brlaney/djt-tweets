@@ -25,7 +25,7 @@ const Navbar = () => {
           <Typography
             className={styles.brand}
             variant='h6'
-            color='primary'
+            color='#1d2031'
             noWrap
             sx={{ flexGrow: 1 }}
           >
@@ -36,28 +36,10 @@ const Navbar = () => {
               className={styles.link}
               variant='button'
               color='text.primary'
-              href='#'
+              href='/tweets'
               sx={{ my: 1, mx: 1.5 }}
             >
-              Shop
-            </Link>
-            <Link
-              className={styles.link}
-              variant='button'
-              color='text.primary'
-              href='#'
-              sx={{ my: 1, mx: 1.5 }}
-            >
-              Contact
-            </Link>
-            <Link
-              className={styles.link}
-              variant='button'
-              color='text.primary'
-              href='#'
-              sx={{ my: 1, mx: 1.5 }}
-            >
-              Support
+              Tweets
             </Link>
           </nav>
           <Button
@@ -67,7 +49,7 @@ const Navbar = () => {
             variant='outlined'
             sx={{ my: 1, mx: 0.4 }}
           >
-            Login
+            Sign-in
           </Button>
           <Button
             className={styles.register}
@@ -76,7 +58,7 @@ const Navbar = () => {
             variant='outlined'
             sx={{ my: 1, mx: 0.4 }}
           >
-            Register
+            Sign-up
           </Button>
         </Toolbar>
       </AppBar>

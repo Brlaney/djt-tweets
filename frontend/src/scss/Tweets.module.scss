@@ -1,0 +1,63 @@
+@import './themes/theme';
+@import './mixins/width.scss';
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .header {
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 2rem 0 1rem 0;
+    align-items: center;
+    justify-content: center;
+    .title {
+      color: $white;
+      font-weight: bold;
+      text-align: center;
+      padding: 0;
+    }
+  }
+  .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+    margin: 1rem;
+    background-color: $primary;
+    background: $primary;
+    .card {
+      width: 80%;
+      margin: 0.5rem 0 0.75rem 0;
+      .content {
+        .tweet {
+          color: $primary;
+          margin: 0.3rem 0 0.7rem 0;
+        }
+        .timestamp {
+          font-size: 14px;
+          width: 170px;
+          margin: 0 0 1rem 0;
+          .span {
+            font-size: 14px;
+          }
+        }
+        .grid {
+          width: 100%;
+          .item {
+            text-align: center;
+            .meta {
+              .spanMeta {
+                font-weight: bold;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

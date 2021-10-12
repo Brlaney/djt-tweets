@@ -3,8 +3,9 @@
 
 .navbar {
   .toolbar {
-    // .brand {
-    // }
+    .brand {
+      color: $primary;
+    }
     .nav {
       .link {
         margin: 0.8rem 1rem;

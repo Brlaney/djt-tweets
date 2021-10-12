@@ -2,6 +2,7 @@ export default {
   name: 'Donald J. Trump',
   username: 'realDonaldTrump',
   user_id: 25073877,
+  tweetCount: '2,165',
   followers: '84,100,000',
   following: '50',
   numTweets: '38,414',
