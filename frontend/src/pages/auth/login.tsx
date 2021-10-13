@@ -78,7 +78,7 @@ const Login = () => {
             className={styles.avatar}
             sx={{
               m: 1,
-              bgcolor: 'secondary.main'
+              bgcolor: 'primary'
             }}
           >
             <LockOutlinedIcon />
