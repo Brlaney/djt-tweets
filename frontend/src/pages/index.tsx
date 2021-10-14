@@ -1,19 +1,19 @@
-import * as React from 'react'
-import Container from '@mui/material/Container'
-import Box from '@mui/material/Box'
+import * as React from 'react';
+import { motion } from 'framer-motion';
 
-import { motion } from 'framer-motion'
-import { stagger, fadeInUp } from '@/lib/config/animations/svgs/staggered'
-
+// import { stagger, fadeInUp } from '@/lib/config/animations/svgs/staggered';
+// import info from '@/lib/data/info';
+// import Box from '@mui/material/Box';
+// import Container from '@mui/material/Container';
 // import Button from '@mui/material/Button';
 // import Card from '@mui/material/Card';
 // import CardActions from '@mui/material/CardActions';
 // import CardContent from '@mui/material/CardContent';
-import Paper from '@mui/material/Paper'
-import Typography from '@mui/material/Typography'
-import info from '@/lib/data/info'
-import Landing from '@/components/Landing'
-import styles from '@/styles/Home.module.scss'
+
+import Paper from '@mui/material/Paper';
+import Typography from '@mui/material/Typography';
+import Landing from '@/components/Landing';
+import styles from '@/styles/Home.module.scss';
 
 const Index = () => {
   return (
@@ -24,26 +24,20 @@ const Index = () => {
       exit={{ opacity: 0 }}
       layout
     >
-      <Container
-        className={styles.child}
-        sx={{ p: 0, m: 0, width: '100vw' }}
-      >
-
-        {/* Header */}
-        <Paper className={styles.header} elevation={0}>
-          <Typography
-            className={styles.title}
-            variant='h1'
-            component='h1'
-            gutterBottom
-          >
-            The State of Our Union
-          </Typography>
-        </Paper>
-      </Container>
+      {/* Header */}
+      <Paper className={styles.header} elevation={0}>
+        <Typography
+          className={styles.title}
+          variant='h1'
+          component='h1'
+          gutterBottom
+        >
+          The State of Our Union
+        </Typography>
+      </Paper>
       <Landing />
     </motion.div>
   )
-}
+};
 
-export default Index
+export default Index;

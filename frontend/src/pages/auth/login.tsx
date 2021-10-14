@@ -29,6 +29,10 @@ const Login = () => {
       axios.post(`${server}/auth/local`, {
         identifier: values.identifier,
         password: values.password,
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        }
       })
     }
   });
@@ -79,7 +83,10 @@ const Login = () => {
             className={styles.avatar}
             sx={{ m: 1, bgcolor: '#002868' }}
           >
-            <BsFillShieldLockFill color='white' size='1.3rem' />
+            <BsFillShieldLockFill
+              color='white'
+              size='1.3rem'
+            />
           </Avatar>
           <Typography
             className={styles.title}

@@ -9,7 +9,7 @@ import Checkbox from '@mui/material/Checkbox';
 import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
+import { BsFillShieldLockFill } from 'react-icons/bs';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { server } from '@/lib/config/endpoints';
@@ -38,7 +38,8 @@ const Register = () => {
     <>
       <Container
         className={styles.container}
-        component='main' maxWidth='xs'
+        component='main'
+        maxWidth='xs'
       >
         <Box
           className={styles.box}
@@ -51,19 +52,20 @@ const Register = () => {
         >
           <Avatar
             className={styles.avatar}
-            sx={{
-              m: 1,
-              bgcolor: 'primary.main'
-            }}
+            sx={{ m: 1, bgcolor: '#002868' }}
           >
-            <LockOutlinedIcon />
+            <BsFillShieldLockFill
+              color='white'
+              size='1.3rem'
+            />
           </Avatar>
           <Typography
             className={styles.title}
             component='h1'
             variant='h5'
+            color='text.primary'
           >
-            Sign up
+            Sign in
           </Typography>
           <Box
             className={styles.form}
@@ -71,8 +73,15 @@ const Register = () => {
             component='form'
             noValidate
           >
-            <Grid className={styles.grid} container spacing={2}>
-              <Grid className={styles.gridItem} item xs={12}>
+            <Grid
+              className={styles.grid}
+              container
+              spacing={2}>
+              <Grid
+                className={styles.gridItem}
+                item
+                xs={12}
+              >
                 <TextField
                   id='username'
                   name='username'
@@ -115,8 +124,8 @@ const Register = () => {
                 <FormControlLabel
                   className={styles.formControl}
                   control={<Checkbox value='allowExtraEmails' color='secondary' />}
-                  label='I want to receive inspiration, marketing promotions and updates via email.'
-                  sx={{ fontSize: '16px' }}
+                  label='Opt out of email updates.'
+                  sx={{ fontSize: '14px' }}
                 />
               </Grid>
             </Grid>
