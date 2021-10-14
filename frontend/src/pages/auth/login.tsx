@@ -85,6 +85,7 @@ const Login = () => {
             className={styles.title}
             component='h1'
             variant='h5'
+            color='text.primary'
           >
             Sign in
           </Typography>
@@ -101,8 +102,8 @@ const Login = () => {
               className={styles.inputEmail}
               margin='normal'
               label='Email Address'
-              autoComplete='email'
               type='email'
+              placeholder='Enter your email'
               onChange={formik.handleChange}
               value={formik.values.identifier}
               autoFocus
@@ -116,6 +117,7 @@ const Login = () => {
               margin='normal'
               label='Password'
               type='password'
+              placeholder='Enter your password'
               autoComplete='current-password'
               onChange={formik.handleChange}
               value={formik.values.password}

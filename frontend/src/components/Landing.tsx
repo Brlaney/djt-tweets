@@ -1,8 +1,10 @@
 import { motion } from 'framer-motion';
 import {
+  fadeInUp,
   mainPathVariant,
   shapeVariations,
 } from '@/lib/config/animations/svgs/svgs';
+import styles from '@/styles/Landing.module.scss';
 
 const usRed = '#BF0A30';
 const usBlue = '#002868';
@@ -10,14 +12,21 @@ const usBlue = '#002868';
 const Landing = () => {
   return (
     <motion.div
-      className='animationParent'
+      className={styles.animationParent}
       initial='initial'
       animate='animate'
       exit={{ opacity: 0 }}
+      variants={fadeInUp}
+      layout
     >
-      <svg width='900' height='900' viewBox='0 0 900 900' fill='none'>
+      <svg
+        width='1000'
+        height='900'
+        viewBox='0 0 1000 900'
+        fill='none'
+      >
         <g clipPath='url(#clip0_2:140)'>
-          <g filter='url(#filter0_d_2:140)'>
+          <motion.g filter='url(#filter0_d_2:140)'>
             <motion.circle
               {...mainPathVariant}
               cx='99'
@@ -30,9 +39,9 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
-          </g>
+          </motion.g>
           <g filter='url(#filter1_d_2:140)'>
             <motion.circle
               cx='210'
@@ -45,7 +54,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter2_d_2:140)'>
@@ -60,7 +69,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter3_d_2:140)'>
@@ -75,7 +84,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter4_d_2:140)'>
@@ -90,7 +99,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter5_d_2:140)'>
@@ -105,7 +114,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter6_d_2:140)'>
@@ -120,7 +129,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter7_d_2:140)'>
@@ -135,7 +144,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter8_d_2:140)'>
@@ -150,7 +159,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter9_d_2:140)'>
@@ -165,7 +174,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter10_d_2:140)'>
@@ -180,7 +189,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter11_d_2:140)'>
@@ -195,7 +204,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter12_d_2:140)'>
@@ -210,7 +219,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter13_d_2:140)'>
@@ -225,7 +234,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter14_d_2:140)'>
@@ -240,7 +249,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter15_d_2:140)'>
@@ -255,7 +264,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter16_d_2:140)'>
@@ -270,7 +279,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter17_d_2:140)'>
@@ -285,7 +294,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter18_d_2:140)'>
@@ -300,7 +309,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter19_d_2:140)'>
@@ -314,7 +323,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter20_d_2:140)'>
@@ -328,7 +337,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter21_d_2:140)'>
@@ -342,7 +351,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter22_d_2:140)'>
@@ -356,7 +365,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter23_d_2:140)'>
@@ -370,7 +379,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter24_d_2:140)'>
@@ -384,7 +393,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter25_d_2:140)'>
@@ -398,7 +407,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter26_d_2:140)'>
@@ -412,7 +421,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter27_d_2:140)'>
@@ -427,7 +436,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter28_d_2:140)'>
@@ -441,7 +450,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter29_d_2:140)'>
@@ -455,7 +464,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter30_d_2:140)'>
@@ -469,7 +478,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter31_d_2:140)'>
@@ -484,7 +493,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter32_d_2:140)'>
@@ -498,7 +507,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter33_d_2:140)'>
@@ -512,7 +521,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter34_d_2:140)'>
@@ -526,7 +535,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter35_d_2:140)'>
@@ -540,7 +549,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter36_d_2:140)'>
@@ -555,7 +564,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter37_d_2:140)'>
@@ -569,7 +578,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter38_d_2:140)'>
@@ -584,7 +593,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter39_d_2:140)'>
@@ -599,7 +608,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter40_d_2:140)'>
@@ -614,7 +623,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter41_d_2:140)'>
@@ -629,7 +638,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter42_d_2:140)'>
@@ -644,7 +653,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter43_d_2:140)'>
@@ -658,7 +667,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter44_d_2:140)'>
@@ -673,7 +682,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter45_d_2:140)'>
@@ -688,7 +697,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter46_d_2:140)'>
@@ -702,7 +711,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter47_d_2:140)'>
@@ -717,7 +726,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter48_d_2:140)'>
@@ -732,7 +741,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter49_d_2:140)'>
@@ -746,7 +755,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter50_d_2:140)'>
@@ -761,7 +770,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter51_d_2:140)'>
@@ -775,7 +784,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter52_d_2:140)'>
@@ -790,7 +799,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter53_d_2:140)'>
@@ -805,7 +814,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter54_d_2:140)'>
@@ -820,7 +829,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter55_d_2:140)'>
@@ -835,7 +844,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter56_d_2:140)'>
@@ -850,7 +859,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter57_d_2:140)'>
@@ -865,7 +874,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter58_d_2:140)'>
@@ -880,7 +889,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter59_d_2:140)'>
@@ -895,7 +904,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter60_d_2:140)'>
@@ -910,7 +919,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter61_d_2:140)'>
@@ -925,7 +934,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter62_d_2:140)'>
@@ -940,7 +949,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter63_d_2:140)'>
@@ -955,7 +964,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter64_d_2:140)'>
@@ -969,7 +978,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter65_d_2:140)'>
@@ -984,7 +993,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter66_d_2:140)'>
@@ -999,7 +1008,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter67_d_2:140)'>
@@ -1014,7 +1023,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter68_d_2:140)'>
@@ -1029,7 +1038,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter69_d_2:140)'>
@@ -1043,7 +1052,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter70_d_2:140)'>
@@ -1057,7 +1066,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter71_d_2:140)'>
@@ -1071,7 +1080,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter72_d_2:140)'>
@@ -1085,7 +1094,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter73_d_2:140)'>
@@ -1100,7 +1109,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter74_d_2:140)'>
@@ -1115,7 +1124,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter75_d_2:140)'>
@@ -1130,7 +1139,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter76_d_2:140)'>
@@ -1144,7 +1153,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter77_d_2:140)'>
@@ -1158,7 +1167,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter78_d_2:140)'>
@@ -1173,7 +1182,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter79_d_2:140)'>
@@ -1187,7 +1196,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter80_d_2:140)'>
@@ -1202,7 +1211,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter81_d_2:140)'>
@@ -1217,7 +1226,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter82_d_2:140)'>
@@ -1232,7 +1241,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter83_d_2:140)'>
@@ -1247,7 +1256,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter84_d_2:140)'>
@@ -1262,7 +1271,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter85_d_2:140)'>
@@ -1277,7 +1286,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter86_d_2:140)'>
@@ -1292,7 +1301,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter87_d_2:140)'>
@@ -1307,7 +1316,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter88_d_2:140)'>
@@ -1322,7 +1331,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter89_d_2:140)'>
@@ -1337,7 +1346,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter90_d_2:140)'>
@@ -1351,7 +1360,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter91_d_2:140)'>
@@ -1366,7 +1375,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter92_d_2:140)'>
@@ -1381,7 +1390,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter93_d_2:140)'>
@@ -1395,7 +1404,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter94_d_2:140)'>
@@ -1410,7 +1419,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter95_d_2:140)'>
@@ -1425,7 +1434,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter96_d_2:140)'>
@@ -1440,7 +1449,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter97_d_2:140)'>
@@ -1455,7 +1464,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter98_d_2:140)'>
@@ -1470,7 +1479,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter99_d_2:140)'>
@@ -1485,7 +1494,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter100_d_2:140)'>
@@ -1500,7 +1509,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter101_d_2:140)'>
@@ -1514,7 +1523,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter102_d_2:140)'>
@@ -1528,7 +1537,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter103_d_2:140)'>
@@ -1542,7 +1551,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter104_d_2:140)'>
@@ -1557,7 +1566,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter105_d_2:140)'>
@@ -1572,7 +1581,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter106_d_2:140)'>
@@ -1587,7 +1596,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter107_d_2:140)'>
@@ -1601,7 +1610,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter108_d_2:140)'>
@@ -1615,7 +1624,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter109_d_2:140)'>
@@ -1630,7 +1639,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter110_d_2:140)'>
@@ -1644,7 +1653,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter111_d_2:140)'>
@@ -1658,7 +1667,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter112_d_2:140)'>
@@ -1673,7 +1682,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter113_d_2:140)'>
@@ -1687,7 +1696,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter114_d_2:140)'>
@@ -1702,7 +1711,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter115_d_2:140)'>
@@ -1717,7 +1726,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter116_d_2:140)'>
@@ -1731,7 +1740,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter117_d_2:140)'>
@@ -1745,7 +1754,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter118_d_2:140)'>
@@ -1759,7 +1768,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter119_d_2:140)'>
@@ -1774,7 +1783,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter120_d_2:140)'>
@@ -1789,7 +1798,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter121_d_2:140)'>
@@ -1803,7 +1812,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter122_d_2:140)'>
@@ -1818,7 +1827,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter123_d_2:140)'>
@@ -1833,7 +1842,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter124_d_2:140)'>
@@ -1848,7 +1857,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter125_d_2:140)'>
@@ -1863,7 +1872,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter126_d_2:140)'>
@@ -1878,7 +1887,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter127_d_2:140)'>
@@ -1893,7 +1902,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter128_d_2:140)'>
@@ -1907,7 +1916,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter129_d_2:140)'>
@@ -1921,7 +1930,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter130_d_2:140)'>
@@ -1935,7 +1944,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter131_d_2:140)'>
@@ -1949,7 +1958,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter132_d_2:140)'>
@@ -1963,7 +1972,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter133_d_2:140)'>
@@ -1977,7 +1986,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter134_d_2:140)'>
@@ -1991,7 +2000,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter135_d_2:140)'>
@@ -2005,7 +2014,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter136_d_2:140)'>
@@ -2020,7 +2029,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter137_d_2:140)'>
@@ -2035,7 +2044,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter138_d_2:140)'>
@@ -2050,7 +2059,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter139_d_2:140)'>
@@ -2065,7 +2074,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter140_d_2:140)'>
@@ -2080,7 +2089,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter141_d_2:140)'>
@@ -2095,7 +2104,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter142_d_2:140)'>
@@ -2110,7 +2119,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter143_d_2:140)'>
@@ -2125,7 +2134,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter144_d_2:140)'>
@@ -2139,7 +2148,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter145_d_2:140)'>
@@ -2153,7 +2162,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter146_d_2:140)'>
@@ -2167,7 +2176,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter147_d_2:140)'>
@@ -2181,7 +2190,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter148_d_2:140)'>
@@ -2195,7 +2204,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter149_d_2:140)'>
@@ -2209,7 +2218,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter150_d_2:140)'>
@@ -2223,7 +2232,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter151_d_2:140)'>
@@ -2237,7 +2246,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter152_d_2:140)'>
@@ -2251,7 +2260,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter153_d_2:140)'>
@@ -2265,7 +2274,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter154_d_2:140)'>
@@ -2280,7 +2289,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter155_d_2:140)'>
@@ -2295,7 +2304,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter156_d_2:140)'>
@@ -2309,7 +2318,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter157_d_2:140)'>
@@ -2324,7 +2333,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter158_d_2:140)'>
@@ -2338,7 +2347,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter159_d_2:140)'>
@@ -2353,7 +2362,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter160_d_2:140)'>
@@ -2368,7 +2377,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter161_d_2:140)'>
@@ -2383,7 +2392,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter162_d_2:140)'>
@@ -2398,7 +2407,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
           <g filter='url(#filter163_d_2:140)'>
@@ -2412,7 +2421,7 @@ const Landing = () => {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] },
               }}
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: -200, opacity: 0 }}
             />
           </g>
         </g>

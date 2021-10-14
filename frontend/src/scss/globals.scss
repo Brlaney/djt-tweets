@@ -36,6 +36,9 @@ a {
   background: #555;
 }
 
-.katex { 
-  font-family: $primary-font; 
+.animationParent {
+  padding: 2rem;
+  position: relative;
+  width: 100%;
+  height: 100%;
 }

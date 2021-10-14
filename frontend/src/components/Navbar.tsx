@@ -1,19 +1,36 @@
+import { motion } from 'framer-motion';
+import {
+  stagger,
+  fadeInUp,
+} from '@/lib/config/animations/svgs/staggered';
+
 import { BiHomeAlt } from 'react-icons/bi';
 import AppBar from '@mui/material/AppBar';
 import Button from '@mui/material/Button';
+import IconButton from '@mui/material/IconButton';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 import styles from '@/styles/Navbar.module.scss';
 
+import { BsChatRightQuote } from 'react-icons/bs';
+import { FaSignInAlt } from 'react-icons/fa';
+
 const Navbar = () => {
   return (
-    <>
+    <motion.div
+      className={styles.navcontainer}
+      initial='initial'
+      animate='animate'
+      exit={{ opacity: 0 }}
+      layout
+    >
       <AppBar
         className={styles.navbar}
         position='static'
         color='transparent'
         elevation={0}
+        sx={{ height: '90px', justifyContent: 'center' }}
       >
         <Toolbar
           className={styles.toolbar}
@@ -39,18 +56,29 @@ const Navbar = () => {
               className={styles.link}
               variant='button'
               href='/tweets'
-              sx={{ my: 1, mx: 1.5, color: 'white' }}
+              sx={{ my: 1, mx: 1.5 }}
             >
-              Tweets
+              <BsChatRightQuote
+                // color='#BF0A30'
+                // color='#002868'
+                color='white'
+                size='1.75rem'
+              />
             </Link>
           </nav>
-          <Button
-            className={styles.login}
+          <IconButton
             href='/auth/login'
-            sx={{ my: 1, mx: 0.4, color: 'white' }}
+            className={styles.login}
+            aria-label='Login-button'
+            sx={{ my: 1, mx: 0.4 }}
           >
-            Sign-in
-          </Button>
+            <FaSignInAlt
+              // color='#BF0A30'
+              // color='#002868'
+              color='white'
+              size='1.75rem'
+            />
+          </IconButton>
           <Button
             className={styles.register}
             href='/auth/register'
@@ -60,7 +88,7 @@ const Navbar = () => {
           </Button>
         </Toolbar>
       </AppBar>
-    </>
+    </motion.div>
   );
 }
 
