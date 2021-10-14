@@ -9,13 +9,39 @@ import Checkbox from '@mui/material/Checkbox';
 import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-import { BsFillShieldLockFill } from 'react-icons/bs';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
+import { BsFillShieldLockFill } from 'react-icons/bs';
 import { server } from '@/lib/config/endpoints';
+// import Redirect from '@/components/Redirect';
 import styles from '@/styles/Auth.module.scss';
 
+/* 
+  if (shouldRedirect) {
+    return <Redirect to='/create/success' />
+  };
+
+const handleSubmit = async (e: { preventDefault: () => void }) => {
+    e.preventDefault()
+    try {
+      const response = await fetch(`${server}/companies`, {
+        method: 'POST',
+        headers,
+        body: JSON.stringify(modifiedData),
+      })
+        .then(checkStatus)
+        .then(parseJSON)
+      setShouldRedirect(true)
+    } catch (error) {
+      setErrorCompanies(error)
+    }
+  };
+*/
+
+
 const Register = () => {
+  const [shouldRedirect, setShouldRedirect] = React.useState(false);
+
   const formik = useFormik({
     initialValues: {
       username: 'brlaney',
@@ -23,9 +49,6 @@ const Register = () => {
       password: 'Abc37920!',
     },
     onSubmit: values => {
-      // Testing response:
-      // alert(JSON.stringify(values, null, 2));
-
       axios.post(`${server}/auth/local`, {
         username: values.username,
         identifier: values.identifier,
@@ -73,33 +96,25 @@ const Register = () => {
             component='form'
             noValidate
           >
-            <Grid
-              className={styles.grid}
-              container
-              spacing={2}>
-              <Grid
-                className={styles.gridItem}
-                item
-                xs={12}
-              >
+            <Grid className={styles.grid} container spacing={3}>
+              <Grid className={styles.gridItem} item xs={12}>
                 <TextField
                   id='username'
                   name='username'
                   label='Username'
                   className={styles.inputUsername}
-                  autoComplete='Username'
-                  margin='normal'
                   onChange={formik.handleChange}
                   value={formik.values.username}
                   autoFocus
                   fullWidth
                 />
+              </Grid>
+              <Grid className={styles.gridItem} item xs={12}>
                 <TextField
                   id='email'
                   name='email'
                   label='Email Address'
                   className={styles.inputEmail}
-                  autoComplete='email'
                   type='email'
                   onChange={formik.handleChange}
                   value={formik.values.identifier}
@@ -115,7 +130,6 @@ const Register = () => {
                   label='Password'
                   type='password'
                   id='password'
-                  autoComplete='password'
                   onChange={formik.handleChange}
                   value={formik.values.password}
                 />
