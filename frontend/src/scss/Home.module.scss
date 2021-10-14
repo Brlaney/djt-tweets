@@ -9,6 +9,7 @@
   justify-content: center;
   .box {
     .header {
+      background-color: transparent;
       border: 0;
       display: flex;
       flex-direction: column;
@@ -17,7 +18,7 @@
       align-items: center;
       justify-content: center;
       .title {
-        color: $primary;
+        color: $white;
         font-weight: bold;
         text-align: center;
         padding: 0;
@@ -36,7 +37,13 @@
           background-color: $secondary;
         }
       }
-
+    }
+    .svgContainer {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      height: 903px;
+      width: 873px;
     }
   }
 }

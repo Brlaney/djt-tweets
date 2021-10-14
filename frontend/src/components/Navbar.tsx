@@ -1,3 +1,4 @@
+import { BiHomeAlt } from 'react-icons/bi';
 import AppBar from '@mui/material/AppBar';
 import Button from '@mui/material/Button';
 import Toolbar from '@mui/material/Toolbar';
@@ -5,18 +6,15 @@ import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 import styles from '@/styles/Navbar.module.scss';
 
+
 const Navbar = () => {
   return (
     <>
       <AppBar
         className={styles.navbar}
         position='static'
-        color='default'
+        color='transparent'
         elevation={0}
-        sx={{
-          borderBottom: (theme) =>
-            `1px solid ${theme.palette.divider}`
-        }}
       >
         <Toolbar
           className={styles.toolbar}
@@ -25,19 +23,22 @@ const Navbar = () => {
           <Typography
             className={styles.brand}
             variant='h6'
-            color='#1d2031'
+            color='white'
             noWrap
             sx={{ flexGrow: 1 }}
           >
-            App | Home
+            <BiHomeAlt
+              className={styles.homeicon}
+              color='white'
+              size='2.2rem'
+            />
           </Typography>
           <nav className={styles.nav}>
             <Link
               className={styles.link}
               variant='button'
-              color='text.primary'
               href='/tweets'
-              sx={{ my: 1, mx: 1.5 }}
+              sx={{ my: 1, mx: 1.5, color: 'white' }}
             >
               Tweets
             </Link>
@@ -45,18 +46,14 @@ const Navbar = () => {
           <Button
             className={styles.login}
             href='/auth/login'
-            color='primary'
-            variant='outlined'
-            sx={{ my: 1, mx: 0.4 }}
+            sx={{ my: 1, mx: 0.4, color: 'white' }}
           >
             Sign-in
           </Button>
           <Button
             className={styles.register}
             href='/auth/register'
-            color='secondary'
-            variant='outlined'
-            sx={{ my: 1, mx: 0.4 }}
+            sx={{ my: 1, mx: 0.4, color: 'white' }}
           >
             Sign-up
           </Button>

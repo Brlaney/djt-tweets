@@ -13,7 +13,7 @@ let theme = createTheme({
     warning: { main: '#F5EE9E' },
     info: { main: '#568BFF' },
     success: { main: '#00B389' },
-    background: { default: '#1D2031' }
+    background: { default: 'rgba(71, 69, 67, 0.9)' }
   },
   breakpoints: {
     values: { xs: 600, sm: 800, md: 1000, lg: 1200, xl: 1536, }

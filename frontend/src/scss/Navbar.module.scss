@@ -4,19 +4,23 @@
 .navbar {
   .toolbar {
     .brand {
-      color: $primary;
+      color: $white;
     }
     .nav {
+      color: $white;
       .link {
         margin: 0.8rem 1rem;
+        color: $white;
       }
     }
     .login {
       background-color: $secondary;
+      color: $white;
       // margin: 0.8rem 0.3rem;
     }
     .register {
       background-color: $success;
+      color: $white;
       // margin: 0.8rem 0.3rem;
     }
   }
