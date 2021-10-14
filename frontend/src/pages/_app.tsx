@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Head from 'next/head';
 import { AppProps } from 'next/app';
+import { AnimatePresence } from 'framer-motion';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { CacheProvider, EmotionCache } from '@emotion/react';
@@ -12,7 +13,7 @@ const clientSideEmotionCache = createEmotionCache();
 
 interface MyAppProps extends AppProps {
   emotionCache?: EmotionCache;
-}
+};
 
 export default function MyApp(props: MyAppProps) {
   const {
@@ -38,7 +39,9 @@ export default function MyApp(props: MyAppProps) {
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Component {...pageProps} theme={theme} />
+        <AnimatePresence>
+          <Component {...pageProps} theme={theme} />
+        </AnimatePresence>
       </ThemeProvider>
     </CacheProvider>
   );

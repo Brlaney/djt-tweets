@@ -6,7 +6,6 @@ import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 import styles from '@/styles/Navbar.module.scss';
 
-
 const Navbar = () => {
   return (
     <>
@@ -27,11 +26,13 @@ const Navbar = () => {
             noWrap
             sx={{ flexGrow: 1 }}
           >
-            <BiHomeAlt
-              className={styles.homeicon}
-              color='white'
-              size='2.2rem'
-            />
+            <Link href='/'>
+              <BiHomeAlt
+                className={styles.homeicon}
+                color='white'
+                size='2.2rem'
+              />
+            </Link>
           </Typography>
           <nav className={styles.nav}>
             <Link

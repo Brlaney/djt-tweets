@@ -13,20 +13,19 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { server } from '@/lib/config/endpoints';
-import nookies, { setCookie } from 'nookies'
 import styles from '@/styles/Auth.module.scss';
+
+// import nookies, { setCookie } from 'nookies'
+import { BsFillShieldLockFill } from 'react-icons/bs';
+
 
 const Login = () => {
   const formik = useFormik({
     initialValues: {
-      // username: 'brlaney',
       identifier: 'testing123@gmail.com',
       password: 'Abc37920!',
     },
     onSubmit: values => {
-      // Testing response:
-      // alert(JSON.stringify(values, null, 2));
-
       axios.post(`${server}/auth/local`, {
         identifier: values.identifier,
         password: values.password,
@@ -34,29 +33,31 @@ const Login = () => {
     }
   });
 
-  //   const loginData = {
-  //     identifier: email,
-  //     password: password
-  //   };
+  /*
+    const loginData = {
+      identifier: email,
+      password: password
+    };
 
-  //   const login = await fetch(`${server}/auth/local`, {
-  //     identifier: 'testing123@gmail.com',
-  //     password: 'Abc37920!',
-  //     method: 'POST',
-  //     headers: {
-  //       'Accept': 'application/json',
-  //       'Content-Type': 'application/json'
-  //     },
-  //     body: JSON.stringify(loginData)
-  //   });
+    const login = await fetch(`${server}/auth/local`, {
+      identifier: 'testing123@gmail.com',
+      password: 'Abc37920!',
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(loginData)
+    });
 
-  //   const loginResponse = await login.json();
+    const loginResponse = await login.json();
 
-  //   setCookie(null, 'jwt', loginResponse.jwt, {
-  //     maxAge: 30 * 24 * 60 * 60,
-  //     path: '/'
-  //   });
-  // },
+    setCookie(null, 'jwt', loginResponse.jwt, {
+      maxAge: 30 * 24 * 60 * 60,
+      path: '/'
+    });
+  },
+  */
 
   return (
     <>
@@ -76,12 +77,9 @@ const Login = () => {
         >
           <Avatar
             className={styles.avatar}
-            sx={{
-              m: 1,
-              bgcolor: 'primary'
-            }}
+            sx={{ m: 1, bgcolor: '#002868' }}
           >
-            <LockOutlinedIcon />
+            <BsFillShieldLockFill color='white' size='1.3rem' />
           </Avatar>
           <Typography
             className={styles.title}
@@ -97,16 +95,6 @@ const Login = () => {
             noValidate
             sx={{ mt: 1 }}
           >
-            {/* <TextField
-              id='username'
-              name='username'
-              className={styles.inputEmail}
-              margin='normal'
-              fullWidth
-              label='Username'
-              autoComplete='Username'
-              autoFocus
-            /> */}
             <TextField
               id='email'
               name='identifier'
@@ -150,12 +138,21 @@ const Login = () => {
             </Button>
             <Grid container className={styles.grid}>
               <Grid item xs className={styles.gridItem}>
-                <Link href='#' variant='body2' className={styles.gridLink}>
+                <Link
+                  href='#'
+                  variant='body2'
+                  className={styles.gridLink}
+                >
                   Forgot password?
                 </Link>
               </Grid>
               <Grid item className={styles.gridItem}>
-                <Link href='/auth/register' variant='body2' className={styles.gridLink}>
+                <Link
+                  href='/auth/register'
+                  variant='body2'
+                  color='secondary'
+                  className={styles.gridLink}
+                >
                   {"Don't have an account? Sign Up"}
                 </Link>
               </Grid>

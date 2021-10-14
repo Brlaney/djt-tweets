@@ -7,8 +7,8 @@ const font = "'Rubik', sans-serif";
 
 let theme = createTheme({
   palette: {
-    primary: { main: '#1d2031' },
-    secondary: { main: '#dc0250' },
+    primary: { main: '#002868' },
+    secondary: { main: '#BF0A30' },
     error: { main: '#6E353A' },
     warning: { main: '#F5EE9E' },
     info: { main: '#568BFF' },

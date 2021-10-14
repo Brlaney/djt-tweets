@@ -16,8 +16,10 @@ const Index = () => {
 
   return (
     <>
-      <Container className={styles.container}>
-        <Box className={styles.box}>
+      <Container
+        className={styles.container}
+        sx={{ p: 0, m: 0, width: '100vw' }}
+      >
 
           {/* Header */}
           <Paper className={styles.header} elevation={0}>
@@ -36,7 +38,6 @@ const Index = () => {
             <Landing />
           </Box>
 
-        </Box>
       </Container>
     </>
   );
