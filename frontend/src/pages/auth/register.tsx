@@ -13,7 +13,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { BsFillShieldLockFill } from 'react-icons/bs';
 import { server } from '@/lib/config/endpoints';
-// import Redirect from '@/components/Redirect';
+import Redirect from '@/components/Redirect';
 import styles from '@/styles/Auth.module.scss';
 
 /* 
@@ -53,7 +53,9 @@ const Register = () => {
         username: values.username,
         identifier: values.identifier,
         password: values.password,
-      })
+      });
+
+      setShouldRedirect(true);
     }
   });
 

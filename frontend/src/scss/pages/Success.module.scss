@@ -24,14 +24,14 @@
     }
     .card {
       padding: 15px 20px 15px 20px;
-      background: $light;
+      background: $white;
       margin: auto;
       width: 50%;
       .cardContent {
         padding: 20px;
         .title {
           padding-bottom: 15px;
-          color: $text-dk;
+          color: $white;
           border-bottom: 2px solid rgba(204, 210, 237, 0.638);
         }
         .body {
@@ -46,11 +46,11 @@
           align-items: flex-end;
           justify-content: center;
           .button {
-            color: $bg-light;
+            color: $primary;
             margin: 0 5px 0 5px;
           }
           .link {
-            color: $tertiary;
+            color: $secondary;
             margin: 0 10px 0 10px;
           }
         }

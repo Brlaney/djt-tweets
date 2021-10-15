@@ -13,13 +13,16 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { server } from '@/lib/config/endpoints';
-import styles from '@/styles/Auth.module.scss';
+import styles from '@/styles/pages/Auth.module.scss';
+import Redirect from '@/components/Redirect';
 
 // import nookies, { setCookie } from 'nookies'
 import { BsFillShieldLockFill } from 'react-icons/bs';
 
 
 const Login = () => {
+  const [shouldRedirect, setShouldRedirect] = React.useState(false);
+
   const formik = useFormik({
     initialValues: {
       identifier: 'testing123@gmail.com',
@@ -34,8 +37,13 @@ const Login = () => {
           'Content-Type': 'application/json'
         }
       })
+      setShouldRedirect(true);
     }
   });
+
+  if (shouldRedirect) {
+    return <Redirect to='/auth/success' />
+  };
 
   /*
     const loginData = {
