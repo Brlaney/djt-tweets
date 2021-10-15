@@ -33,3 +33,10 @@ export interface ITweet {
   likes: number;
 };
 
+export interface IBubble {
+  id: number; 
+  cx: string;
+  cy: string;
+  r: string;
+  fill: string;
+};

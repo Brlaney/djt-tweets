@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 // import { stagger, fadeInUp } from '@/lib/config/animations/svgs/staggered';
 import Box from '@mui/material/Box';
 import Test from '@/components/tests/Test';
+import { IBubble } from '@/lib/types';
 import styles from '@/styles/pages/Home.module.scss';
-
 
 const Tests = () => {
   return (
@@ -17,9 +17,9 @@ const Tests = () => {
     >
 
       {/* Test animation container (Box) */}
-      <Box className={styles.testanimation} sx={{ bottom: 0 }}>
+      <motion.div className={styles.testanimation}>
         <Test />
-      </Box>
+      </motion.div>
     </motion.div>
   )
 };
