@@ -13,7 +13,7 @@ import { motion } from 'framer-motion';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import Landing from '@/components/Landing';
-import styles from '@/styles/Home.module.scss';
+import styles from '@/styles/pages/Home.module.scss';
 
 const Index = () => {
   return (

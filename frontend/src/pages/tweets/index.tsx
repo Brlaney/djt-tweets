@@ -11,7 +11,7 @@ import Typography from '@mui/material/Typography';
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
 import { server } from '@/lib/config/endpoints';
 import { ITweet } from '@/lib/types';
-import styles from '@/styles/Tweets.module.scss';
+import styles from '@/styles/pages/Tweets.module.scss';
 
 const Tweets = ({ tweets }:
   InferGetStaticPropsType<typeof getStaticProps>) => {
@@ -118,4 +118,3 @@ export const getStaticProps: GetStaticProps = async _context => {
 };
 
 export default Tweets;
-

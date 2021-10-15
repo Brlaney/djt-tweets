@@ -9,8 +9,8 @@ export default class MyDocument extends Document {
     return (
       <Html lang='en'>
         <Head />
+        <Navbar />
         <body>
-          <Navbar />
           <Main />
           <NextScript />
         </body>

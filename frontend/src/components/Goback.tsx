@@ -1,7 +1,7 @@
 import { IoReturnUpBackOutline } from 'react-icons/io5';
 import IconButton from '@mui/material/IconButton';
 import Link from 'next/link';
-// import styles from '@/styles/Buttons.module.scss';
+// import styles from '@/styles/components/Buttons.module.scss';
 
 const Goback = ({ link }) => {
   return (

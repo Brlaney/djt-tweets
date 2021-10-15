@@ -11,7 +11,7 @@ import IconButton from '@mui/material/IconButton';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
-import styles from '@/styles/Navbar.module.scss';
+import styles from '@/styles/components/Navbar.module.scss';
 
 import { BsChatRightQuote } from 'react-icons/bs';
 import { FaSignInAlt } from 'react-icons/fa';

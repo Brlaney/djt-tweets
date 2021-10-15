@@ -4,7 +4,7 @@ import {
   mainPathVariant,
   shapeVariations,
 } from '@/lib/config/animations/svgs/svgs';
-import styles from '@/styles/Landing.module.scss';
+import styles from '@/styles/components/Landing.module.scss';
 
 const usRed = '#BF0A30';
 const usBlue = '#002868';
