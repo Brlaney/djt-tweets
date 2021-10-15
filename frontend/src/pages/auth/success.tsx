@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Avatar from '@mui/material/Avatar';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
+import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import { BiLike } from 'react-icons/bi';
 import Loading from '@/components/Loading';
@@ -23,12 +24,14 @@ const Success = () => {
   };
 
   /* If: the progress bar is completely filled.
-  Then: set the show animation state to true.
-  Otherwise, the loop continues. Then: set the 
-  show animation state to true */
+    Then: set the show animation state to true.
+  Otherwise: loop continues. 
+    Then: set the show animation state to true.
+  */
   useEffect(() => {
     const timer = setInterval(() => {
       setProgress((oldProgress) => {
+        console.log('Progress value:' + oldProgress);
 
         if (oldProgress === 100) {
           setShowAnimation(true)
@@ -65,42 +68,52 @@ const Success = () => {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
+            justifyContent: 'center'
           }}
         >
-          <Avatar
-            className={styles.avatar}
-            sx={{ m: 1, bgcolor: '#002868' }}
-          >
-            <BiLike color='white' size='1.3rem' />
-          </Avatar>
-          <Typography
-            className={styles.title}
-            component='h1'
-            variant='h5'
-            color='text.primary'
-          >
-            Successfully logged in
-          </Typography>
-          <Box className={styles.inner}>
-            <Link href='/'>
-              <Button
-                className={styles.button}
-                variant='contained'
-                color='primary'
-              >
-                Homepage
-              </Button>
-            </Link>
-            <Link href='/tweets'>
-              <Button
-                className={styles.button}
-                variant='contained'
-                color='secondary'
-              >
-                View Tweets
-              </Button>
-            </Link>
-          </Box>
+          <Paper sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            p: 3,
+            border: '1px solid #00B389',
+          }}>
+            <Avatar
+              className={styles.avatar}
+              sx={{ m: 1, bgcolor: '#002868' }}
+            >
+              <BiLike color='white' size='1.5rem' />
+            </Avatar>
+            <Typography
+              className={styles.title}
+              component='h1'
+              variant='h5'
+              color='text.primary'
+            >
+              Successfully logged in
+            </Typography>
+            <Box className={styles.inner}>
+              <Link href='/'>
+                <Button
+                  className={styles.button}
+                  variant='contained'
+                  color='primary'
+                >
+                  Homepage
+                </Button>
+              </Link>
+              <Link href='/tweets'>
+                <Button
+                  className={styles.button}
+                  variant='contained'
+                  color='secondary'
+                >
+                  View Tweets
+                </Button>
+              </Link>
+            </Box>
+          </Paper>
         </Box>
       </motion.div>
     )

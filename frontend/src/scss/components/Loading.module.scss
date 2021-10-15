@@ -17,7 +17,7 @@
     justify-content: center;
     align-items: center;
     .animation {
-      background: $white;
+      // background: $secondary;
       border-radius: 30px;
       width: 64px;
       height: 64px;
@@ -29,10 +29,4 @@
       width: 30%;
     }
   }
-}
-
-.cardContainer:hover,
-.cardContainer:focus,
-.cardContainer:active {
-  border-color: $secondary;
 }
