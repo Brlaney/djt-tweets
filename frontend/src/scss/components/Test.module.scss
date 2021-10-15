@@ -1,29 +1,12 @@
 @import '../themes/theme';
 @import '../mixins/width.scss';
 
-.navcontainer {
-  .navbar {
-    .toolbar {
-      .brand {
-        color: $white;
-      }
-      .nav {
-        color: $white;
-        .link {
-          margin: 0.8rem 1rem;
-          color: $white;
-        }
-      }
-      .login {
-        background-color: $secondary;
-        color: $white;
-        // margin: 0.8rem 0.3rem;
-      }
-      .register {
-        background-color: $success;
-        color: $white;
-        // margin: 0.8rem 0.3rem;
-      }
-    }
-  }
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
 }

@@ -3,10 +3,16 @@ import LinearProgress from '@mui/material/LinearProgress';
 import { motion } from 'framer-motion';
 import styles from '@/styles/components/Loading.module.scss';
 
-export default function Loading({progress}) {
+export default function Loading({ progress }) {
   return (
-    <>
-      <Box className={styles.box}>
+    <motion.div
+      className={styles.container}
+      initial='initial'
+      animate='animate'
+      exit={{ opacity: 0 }}
+      layout
+    >
+      <Box className={styles.box} sx={{ p: 5, }}>
         <div className={styles.animationContainer}>
           <motion.div
             className={styles.animation}
@@ -37,6 +43,6 @@ export default function Loading({progress}) {
           </Box>
         </div>
       </Box>
-    </>
+    </motion.div>
   )
 };
