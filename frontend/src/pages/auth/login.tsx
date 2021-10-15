@@ -19,7 +19,6 @@ import Redirect from '@/components/Redirect';
 // import nookies, { setCookie } from 'nookies'
 import { BsFillShieldLockFill } from 'react-icons/bs';
 
-
 const Login = () => {
   const [shouldRedirect, setShouldRedirect] = React.useState(false);
 
