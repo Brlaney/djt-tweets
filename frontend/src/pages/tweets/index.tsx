@@ -1,5 +1,6 @@
 import * as React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
@@ -11,6 +12,7 @@ import Typography from '@mui/material/Typography';
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
 import { server } from '@/lib/config/endpoints';
 import { ITweet } from '@/lib/types';
+import { BiLike, BiShare, BiReplyAll } from 'react-icons/bi';
 import styles from '@/styles/pages/Tweets.module.scss';
 
 const Tweets = ({ tweets }:
@@ -26,13 +28,35 @@ const Tweets = ({ tweets }:
           {tweetList.map((tweet: ITweet) => (
             <Card key={tweet.id} className={styles.card}>
               <CardContent className={styles.content}>
-                <Typography
-                  className={styles.tweet}
-                  variant='h5'
-                  component='div'
+                <Grid
+                  className={styles.tweetGrid}
+                  container
+                  direction='row'
+                  justifyContent='space-between'
+                  alignItems='center'
+                  spacing={2}
                 >
-                  {tweet.tweet}
-                </Typography>
+                  <Grid item xs={3}>
+                    <Image
+                      alt='trump-icon'
+                      src='/trump_icon.png'
+                      className={styles.trumpIcon}
+                      width={98.4}
+                      height={100}
+                      layout='responsive'
+
+                    />
+                  </Grid>
+                  <Grid item xs={9}>
+                    <Typography
+                      className={styles.tweet}
+                      variant='h6'
+                      component='div'
+                    >
+                      {tweet.tweet}
+                    </Typography>
+                  </Grid>
+                </Grid>
                 <Typography
                   className={styles.timestamp}
                   color='text.secondary'
@@ -56,31 +80,74 @@ const Tweets = ({ tweets }:
                   className={styles.grid}
                   container
                   direction='row'
-                  justifyContent='space-between'
+                  justifyContent='center'
                   alignItems='center'
+                  spacing={3}
                 >
-                  <Grid className={styles.item} item xs={4}>
+                  <Grid
+                    className={styles.item}
+                    item xs={4}
+                    sx={{
+                      border: '1px solid black',
+                      //  padding: 2,
+                      //  m: 1,
+                    }}
+                  >
                     <Typography className={styles.meta} variant='body2'>
-                      Likes: <Typography
+                      <BiLike
+                        className={styles.likes}
+                        color='primary'
+                        size='1.5rem'
+                      />
+                      <Typography
                         className={styles.spanMeta}
                         color='secondary'
-                        component='span'> {tweet.likes}</Typography>
+                        component='span'>{tweet.likes} </Typography>
+                      likes
                     </Typography>
                   </Grid>
-                  <Grid className={styles.item} item xs={4}>
+                  <Grid
+                    className={styles.item}
+                    item xs={4}
+                    sx={{
+                      border: '1px solid black',
+                      //  p: 2,
+                      //  m: 1,
+                    }}
+                  >
                     <Typography className={styles.meta} variant='body2'>
-                      Retweets: <Typography
+                      <BiShare
+                        className={styles.share}
+                        color='secondary'
+                        size='1.5rem'
+                      />
+                      <Typography
                         className={styles.spanMeta}
                         color='secondary'
-                        component='span'> {tweet.retweets}</Typography>
+                        component='span'>{tweet.retweets} </Typography>
+                      retweets
                     </Typography>
                   </Grid>
-                  <Grid className={styles.item} item xs={4}>
+                  <Grid
+                    className={styles.item}
+                    item xs={4}
+                    sx={{
+                      border: '1px solid black',
+                      //  p: 2,
+                      //  m: 1,
+                    }}
+                  >
                     <Typography className={styles.meta} variant='body2'>
-                      Replies: <Typography
+                      <BiReplyAll
+                        className={styles.replyAll}
+                        color='primary'
+                        size='1.5rem'
+                      />
+                      <Typography
                         className={styles.spanMeta}
                         color='secondary'
-                        component='span'> {tweet.replies}</Typography>
+                        component='span'>{tweet.replies} </Typography>
+                      replies
                     </Typography>
                   </Grid>
                 </Grid>

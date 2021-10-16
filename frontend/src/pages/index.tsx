@@ -12,7 +12,7 @@ import { motion } from 'framer-motion';
 
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
-import Landing from '@/components/Landing';
+import Dots2 from '@/components/Dots2';
 import styles from '@/styles/pages/Home.module.scss';
 
 const Index = () => {
@@ -35,7 +35,10 @@ const Index = () => {
           The State of Our Union
         </Typography>
       </Paper>
-      <Landing />
+
+      {/* Red, wht, & blue circles */}
+      <Dots2 />
+
     </motion.div>
   )
 };

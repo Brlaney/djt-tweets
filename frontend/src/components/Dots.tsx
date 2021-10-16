@@ -9,7 +9,7 @@ import styles from '@/styles/components/Landing.module.scss';
 const usRed = '#BF0A30';
 const usBlue = '#002868';
 
-const Landing = () => {
+const Dots = () => {
   return (
     <motion.div
       className={styles.animationParent}
@@ -8175,4 +8175,4 @@ const Landing = () => {
   );
 };
 
-export default Landing;
+export default Dots;

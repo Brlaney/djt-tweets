@@ -31,12 +31,23 @@
     background-color: $primary;
     background: $primary;
     .card {
+      padding: 0.7rem 0.4rem;
       width: 80%;
       margin: 0.5rem 0 0.75rem 0;
+      .trumpIcon {
+        margin: 1rem;
+      }
       .content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
         .tweet {
+          font-size: 16px;
+          line-height: 1.4;
+          text-align: justify;
+          width: 75%;
           color: $primary;
-          margin: 0.3rem 0 0.7rem 0;
+          margin: 0.5rem 0 0.5rem 0;
         }
         .timestamp {
           font-size: 14px;
@@ -47,10 +58,13 @@
           }
         }
         .grid {
-          width: 100%;
           .item {
-            text-align: center;
+            border: 1px solid $primary;
+            padding: 0.5rem 0 1rem 0;
             .meta {
+              .likes {
+                margin: auto;
+              }
               .spanMeta {
                 font-weight: bold;
               }
