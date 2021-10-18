@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "overdoses",
+  "info": {
+    "name": "overdoses"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "location": {
+      "type": "string",
+      "required": true
+    },
+    "range": {
+      "type": "string"
+    },
+    "rate": {
+      "type": "decimal"
+    },
+    "deaths": {
+      "type": "integer"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "deaths",
+  "info": {
+    "name": "deaths"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "location": {
+      "type": "string",
+      "required": true
+    },
+    "range": {
+      "type": "string",
+      "required": true
+    },
+    "rate": {
+      "type": "decimal",
+      "required": true
+    },
+    "total": {
+      "type": "integer",
+      "required": true
+    }
+  }
+}

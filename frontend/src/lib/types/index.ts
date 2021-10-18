@@ -40,3 +40,10 @@ export interface IBubble {
   r: string;
   fill: string;
 };
+
+export interface IRow {
+  location: string;
+  range: string;
+  rate: number;
+  deaths: number;
+};

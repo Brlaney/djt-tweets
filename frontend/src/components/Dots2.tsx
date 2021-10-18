@@ -26,7 +26,7 @@ const Dots2 = () => {
         fill='none'
         xmlns='http://www.w3.org/2000/svg'
       >
-        <g clip-path='url(#clip0_2:140)'>
+        <g clipPath='url(#clip0_2:140)'>
           <g filter='url(#filter0_d_2:140)'>
             <circle cx='99' cy='412' r='14' fill='white' />
           </g>

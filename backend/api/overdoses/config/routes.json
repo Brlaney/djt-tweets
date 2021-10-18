@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/overdoses",
+      "handler": "overdoses.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/overdoses/count",
+      "handler": "overdoses.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/overdoses/:id",
+      "handler": "overdoses.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/overdoses",
+      "handler": "overdoses.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/overdoses/:id",
+      "handler": "overdoses.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/overdoses/:id",
+      "handler": "overdoses.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
