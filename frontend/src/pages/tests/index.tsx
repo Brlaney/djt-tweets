@@ -1,9 +1,8 @@
 import * as React from 'react';
 import { motion } from 'framer-motion';
 // import { stagger, fadeInUp } from '@/lib/config/animations/svgs/staggered';
-import Box from '@mui/material/Box';
-import Test from '@/components/tests/Test';
-import { IBubble } from '@/lib/types';
+// import Test from '@/components/tests/Test';
+import Turtle from '@/components/tests/Turtle';
 import styles from '@/styles/pages/Home.module.scss';
 
 const Tests = () => {
@@ -18,7 +17,8 @@ const Tests = () => {
 
       {/* Test animation container (Box) */}
       <motion.div className={styles.testanimation}>
-        <Test />
+        {/* <Test /> */}
+        <Turtle />
       </motion.div>
     </motion.div>
   )

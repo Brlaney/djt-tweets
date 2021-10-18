@@ -86,11 +86,15 @@ const Tweets = ({ tweets }:
                 >
                   <Grid
                     className={styles.item}
-                    item xs={4}
+                    item xs={3}
                     sx={{
-                      border: '1px solid black',
-                      //  padding: 2,
-                      //  m: 1,
+                      width: '250px',
+                      border: '1px solid #a5a5a5',
+                      borderRadius: '6px',
+                      py: 1,
+                      my: 1,
+                      mx: 1,
+                      textAlign: 'center'
                     }}
                   >
                     <Typography className={styles.meta} variant='body2'>
@@ -110,9 +114,13 @@ const Tweets = ({ tweets }:
                     className={styles.item}
                     item xs={4}
                     sx={{
-                      border: '1px solid black',
-                      //  p: 2,
-                      //  m: 1,
+                      width: '250px',
+                      border: '1px solid #a5a5a5',
+                      borderRadius: '6px',
+                      py: 1,
+                      my: 1,
+                      mx: 1,
+                      textAlign: 'center'
                     }}
                   >
                     <Typography className={styles.meta} variant='body2'>
@@ -130,11 +138,15 @@ const Tweets = ({ tweets }:
                   </Grid>
                   <Grid
                     className={styles.item}
-                    item xs={4}
+                    item xs={3}
                     sx={{
-                      border: '1px solid black',
-                      //  p: 2,
-                      //  m: 1,
+                      width: '250px',
+                      border: '1px solid #a5a5a5',
+                      borderRadius: '6px',
+                      py: 1,
+                      my: 1,
+                      mx: 1,
+                      textAlign: 'center'
                     }}
                   >
                     <Typography className={styles.meta} variant='body2'>
