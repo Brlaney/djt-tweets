@@ -35,6 +35,9 @@ const Tweets = ({ tweets }:
                   justifyContent='space-between'
                   alignItems='center'
                   spacing={2}
+                  sx={{
+                    mb: 4,
+                  }}
                 >
                   <Grid item xs={3}>
                     <Image
@@ -47,7 +50,7 @@ const Tweets = ({ tweets }:
 
                     />
                   </Grid>
-                  <Grid item xs={9}>
+                  <Grid item xs={8} sx={{ mx: 2 }}>
                     <Typography
                       className={styles.tweet}
                       variant='h6'
@@ -57,25 +60,6 @@ const Tweets = ({ tweets }:
                     </Typography>
                   </Grid>
                 </Grid>
-                <Typography
-                  className={styles.timestamp}
-                  color='text.secondary'
-                  gutterBottom
-                >
-                  Date: <Typography
-                    className={styles.span}
-                    component='span'
-                    color='primary'
-                  > {tweet.date}
-                  </Typography>
-                  <br />
-                  Time: <Typography
-                    className={styles.span}
-                    component='span'
-                    color='primary'> {tweet.time}
-                  </Typography>
-                </Typography>
-
                 <Grid
                   className={styles.grid}
                   container
@@ -83,6 +67,7 @@ const Tweets = ({ tweets }:
                   justifyContent='center'
                   alignItems='center'
                   spacing={3}
+                  sx={{ borderTop: '1px solid #a5a5a5', }}
                 >
                   <Grid
                     className={styles.item}
@@ -92,12 +77,15 @@ const Tweets = ({ tweets }:
                       border: '1px solid #a5a5a5',
                       borderRadius: '6px',
                       py: 1,
-                      my: 1,
-                      mx: 1,
+                      m: 1,
                       textAlign: 'center'
                     }}
                   >
-                    <Typography className={styles.meta} variant='body2'>
+                    <Typography
+                      className={styles.meta}
+                      variant='body2'
+                      sx={{ fontSize: '1rem' }}
+                    >
                       <BiLike
                         className={styles.likes}
                         color='primary'
@@ -106,7 +94,9 @@ const Tweets = ({ tweets }:
                       <Typography
                         className={styles.spanMeta}
                         color='secondary'
-                        component='span'>{tweet.likes} </Typography>
+                        component='span'
+                        sx={{ fontSize: '1rem' }}
+                      >{tweet.likes} </Typography>
                       likes
                     </Typography>
                   </Grid>
@@ -118,8 +108,7 @@ const Tweets = ({ tweets }:
                       border: '1px solid #a5a5a5',
                       borderRadius: '6px',
                       py: 1,
-                      my: 1,
-                      mx: 1,
+                      m: 1,
                       textAlign: 'center'
                     }}
                   >
@@ -144,8 +133,7 @@ const Tweets = ({ tweets }:
                       border: '1px solid #a5a5a5',
                       borderRadius: '6px',
                       py: 1,
-                      my: 1,
-                      mx: 1,
+                      m: 1,
                       textAlign: 'center'
                     }}
                   >
@@ -164,7 +152,6 @@ const Tweets = ({ tweets }:
                   </Grid>
                 </Grid>
               </CardContent>
-
               <CardActions className={styles.actions}>
                 <Link href={`/tweets/details/${tweet.id}`}>
                   <Button
