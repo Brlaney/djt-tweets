@@ -9,17 +9,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex: 1;
+  background-color: $white;
   .testanimation {
-    position: absolute;
-    bottom: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: transparent;
-    margin: 2rem 0 4rem 0;
-    padding: 0 0 3rem 0;
-    border: 0;
+    margin: 2rem 0 0 0;
   }
 }

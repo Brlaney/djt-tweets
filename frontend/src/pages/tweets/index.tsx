@@ -47,7 +47,6 @@ const Tweets = ({ tweets }:
                       width={98.4}
                       height={100}
                       layout='responsive'
-
                     />
                   </Grid>
                   <Grid item xs={8} sx={{ mx: 2 }}>
