@@ -47,3 +47,10 @@ export interface IRow {
   rate: number;
   deaths: number;
 };
+
+export interface ITurtle {
+  id: number;
+  fillColor: string;
+  strokeColor: string;
+  d: string;
+};

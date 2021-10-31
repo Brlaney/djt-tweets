@@ -59,11 +59,17 @@ const Navbar = () => {
               sx={{ my: 1, mx: 1.5 }}
             >
               <BsChatRightQuote
-                // color='#BF0A30'
-                // color='#002868'
                 color='white'
                 size='1.75rem'
               />
+            </Link>
+            <Link
+              className={styles.link}
+              variant='button'
+              href='/tests'
+              sx={{ my: 1, mx: 1.5, color: 'white' }}
+            >
+              Tests
             </Link>
           </nav>
           <IconButton
@@ -73,8 +79,6 @@ const Navbar = () => {
             sx={{ my: 1, mx: 0.4 }}
           >
             <FaSignInAlt
-              // color='#BF0A30'
-              // color='#002868'
               color='white'
               size='1.75rem'
             />
